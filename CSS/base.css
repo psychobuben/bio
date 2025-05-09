@@ -1,0 +1,45 @@
+/* Základní nastavení */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+
+  /* Titulky a texty */
+  h2 {
+    margin-bottom: 15px;
+  }
+  
+  p {
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .hidden {
+    display: none;
+}
+
+/* Pozadí celé stránky */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/Background.webp');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  

@@ -1,0 +1,50 @@
+/* Animace */
+
+.subcategory, .subcategory-btn, .subcategory-container, .subcategory-title, .subcategory-title-box, .subcategory-third-level, .category, .close, .back, .hamburger-subsection, .gallery-wrapper, .about-text, .about-text-more {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+  }
+  
+  
+  
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .bar {
+    height: 5px;
+    width: 30px;
+    background-color: #333;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Efekt pro křížek po kliknutí */
+  .hamburger.active {
+    background-color: #333;
+    transform: scale(1.1) rotate(15deg);
+  }
+  
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  
+  .home.active {
+    background-color: #333;
+    transform: scale(1.1) rotate(15deg);
+  }
+  .home.active  {
+    color: white;
+  }
