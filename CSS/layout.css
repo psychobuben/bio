@@ -18,29 +18,21 @@
   
   /* Sekce - obecné stylování pro texty */
   .about-text {
- 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content:center;
     line-height: 1.6;
     font-size: 1.1rem;
     width: 100%;
     max-width: 500px;
-
-  
+   height: 100%;
+    max-height: calc(100vh - 80px);
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  
-      text-align: center;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  max-width: 800px;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin: auto;
-  max-height: calc(100vh - 80px);
-  overflow: auto;
+    overflow: auto;
   
    
   
@@ -69,25 +61,12 @@
   /* Styly pro jednotlivé sekce */
   
   
-  .section {
- 
-
-    height: 100vh;
-    justify-items: center;
-    align-content: center;
-    
-  }
-
-  .section1 {
+.section {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
-  overflow: hidden;
 }
-
   
   /* Obsahové boxy */
   .content-box {
