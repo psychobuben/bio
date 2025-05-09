@@ -1,4 +1,4 @@
-  /* Základní nastavení */
+/* Základní nastavení */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,35 +25,14 @@ body::before {
   z-index: -1;
 }
 
-.home {
-  display: flex;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-
-  z-index: 1001;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 10px 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 
 
 /* Sekce - obecné stylování pro texty */
 .about-text {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   line-height: 1.6;
   font-size: 1.1rem;
-  width: 100%;
-  max-width: 500px;
- 
-
+  max-width: 800px;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 12px;
@@ -61,35 +40,28 @@ body::before {
   margin: auto;
   max-height: calc(100vh - 80px);
   overflow: auto;
-
- 
-
 }
-.about-text-more {
-  text-align: center;
-  line-height: 1.6;
-  font-size: 1.1rem;
+
+/* Profilová sekce */
+.profile-section {
+  position: relative;
   width: 100%;
-  max-width: 500px;
- 
-
-
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
   margin: auto;
-  max-height: calc(100vh - 400px);
-  overflow: auto;
-
-
 }
-
 
 /* Styly pro jednotlivé sekce */
+.section1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
 
-
-.section {
+.section2 {
   height: 100vh;
   justify-items: center;
   align-content: center;
@@ -310,10 +282,6 @@ input {
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  grid-area: 3;
- 
-
-  
 
 }
 
@@ -388,7 +356,7 @@ input {
   transition: background-color 0.2s ease;
 }
 
-.close{
+.close, .back {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -398,19 +366,6 @@ input {
   border-radius: 10px;
   background-color: rgb(212, 130, 130);
   transition: background-color 0.2s ease;
-
-}
-.back {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  border-radius: 10px;
-  background-color: rgb(212, 130, 130);
-  transition: background-color 0.2s ease;
-  margin-top: 65px;
 }
 
 /* Projektové položky */
@@ -595,7 +550,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Animace */
 
-.subcategory, .subcategory-btn, .subcategory-container, .subcategory-title, .subcategory-title-box, .subcategory-third-level, .category, .close, .back, .hamburger-subsection, .gallery-wrapper, .about-text, .about-text-more {
+.subcategory, .subcategory-btn, .subcategory-container, .subcategory-title, .subcategory-title-box, .subcategory-third-level, .category, .close, .back, .hamburger-subsection, .gallery-wrapper, .about-text {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s forwards;
@@ -636,15 +591,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.home.active {
-  background-color: #333;
-  transform: scale(1.1) rotate(15deg);
-}
-.home.active  {
-  color: white;
-}
-
-
 /* Rresonzivita rpo Iphone SE */
 @media (max-height: 568px) {
   .img-category {
@@ -664,7 +610,6 @@ h1, h2, h3, h4, h5, h6 {
   
     
   }
- 
   h1, h2 {
     font-size: 14px;
   }
@@ -688,6 +633,5 @@ h1, h2, h3, h4, h5, h6 {
     object-fit:cover;
   
   }
-  
   
 }
