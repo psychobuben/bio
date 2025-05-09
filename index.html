@@ -1,24 +1,23 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="./CSS/base.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./CSS/base.css" />
+  <link rel="stylesheet" href="./CSS/layout.css">
+  <link rel="stylesheet" href="./CSS/components.css">
+  <link rel="stylesheet" href="./CSS/animation.css">
+  <link rel="stylesheet" href="./CSS/responzive.css">
   <title>Jan Konrád</title>
 </head>
 <body>
-  
-  <div class="home" id="header">
-    <div>
-      <a href="#1"><img style="width: 35px;" src="./assets/Home.png" alt=""></a>
-    </div>
-   
-   
-     
-    
-   
+
+  <!-- Horní lišta s domovskou ikonou -->
+  <div class="home">
+    <a href="#1"><img src="./assets/Home.png" alt="Domů" style="width: 35px;" /></a>
   </div>
 
+  <!-- Mobilní menu -->
   <input type="checkbox" id="menu-toggle" />
   <label for="menu-toggle" class="hamburger">&#9776;</label>
 
@@ -29,110 +28,82 @@
       <li><a href="#3">Kontakt</a></li>
     </ul>
   </nav>
-  
 
-  <!-- Úvod -->
-  <section class="section1" id="1">
-   
+  <!-- Úvodní sekce -->
+  <section class="section" id="1">
+    
     <div class="category-container">
+
+      <!-- Základní info o autorovi -->
       <div class="about-text">
-
-        <p>
-          Jmenuji se <strong>Jan Konrád.</strong></p>
-               <p>Sledovat mě můžeš na:</p> 
-               <div style="display: flex; gap: 20px; justify-content: center;" >
-                   <img src="./assets/FB.png" style="width: 25px;" alt="">
-                  <img src="./assets/Instagram.png" style="width: 25px;" alt="">
-                  <img src="./assets/YouTube.png" style="width: 25px;" alt="">
-       
-               </div>
-            
-        </p>
-        
+        <p>Jmenuji se <strong>Jan Konrád</strong>.</p>
+        <p>Sledovat mě můžeš na:</p>
+        <div style="display: flex; gap: 20px; justify-content: center;">
+          <img src="./assets/FB.png" style="width: 25px;" alt="Facebook" />
+          <img src="./assets/Instagram.png" style="width: 25px;" alt="Instagram" />
+          <img src="./assets/YouTube.png" style="width: 25px;" alt="YouTube" />
+        </div>
       </div>
-    <div class="about-text" id="about-box" style="display: flex;">
 
-      <p>
-        Věnuji se <strong>3D grafice</strong>,<strong> tvorbě webových stránek</strong>, a práci v <strong>Unity enginu</strong>. 
-      </p>
-      
+      <!-- Zájmy a zaměření -->
+      <div class="about-text" id="about-box" style="display: flex;">
+        <p>Věnuji se <strong>3D grafice</strong>, <strong>tvorbě webových stránek</strong> a práci v <strong>Unity enginu</strong>.</p>
+      </div>
+
+      <!-- Rozšířený popis (zobrazí se po kliknutí) -->
+      <div class="about-text-more" id="autoScrollBox" style="display: none;">
+        <p>Jsem <strong>středoškolský učitel informatiky</strong> s vášní pro <strong>inovaci a kreativní přístup k výuce</strong>.</p>
+        <p>Využívám <strong>moderní technologie</strong> a <strong>projektově orientovanou výuku</strong>.</p>
+        <p>Mimo výuku se věnuji <strong>vývoji her</strong>, <strong>herním mechanikám</strong> a <strong>multiplayerovým webovým projektům</strong>.</p>
+        <p>Zajímá mě <strong>3D grafika</strong>, propojující <strong>techniku, design a umění</strong>.</p>
+        <p>Věřím, že <strong>informatika je nástroj pro vyjádření nápadů a tvorbu budoucnosti</strong>.</p>
+      </div>
+
+      <!-- Tlačítka pro rozbalení/sbalení -->
+      <button class="btn-submit" id="btn-more"><img src="./assets/more_horiz.jpg" alt="Více" /></button>
+      <button class="btn-submit" id="btn-less"><img src="./assets/up.jpeg" alt="Méně" style="width: 20px;" /></button>
     </div>
-
-   
-
- 
-
- 
-
-     
-
-
-    <div class="about-text-more" id="autoScrollBox" style="display: none;">
-      <p>
-        Jsem <strong>středoškolský učitel informatiky</strong> s vášní pro <strong>inovaci a kreativní přístup k výuce</strong>. 
-        Využívám <strong>moderní technologie</strong> a <strong>projektově orientovanou výuku</strong>, 
-        abych studentům přiblížil <strong>reálné využití informatiky</strong> a pomohl jim rozvíjet 
-        <strong>dovednosti budoucnosti</strong>.
-      </p>
-      <p>
-        Mimo pedagogickou praxi se aktivně věnuji <strong>vývoji her</strong>, zejména v oblasti 
-        <strong>nezávislých (indie) multiplayerových webových projektů</strong>. 
-        Baví mě experimentovat s <strong>herními mechanikami</strong>, 
-        <strong>sítí</strong> a <strong>tím, jak vytvořit poutavý zážitek přímo ve webovém prohlížeči</strong>.
-      </p>
-      <p>
-        Dalším z mých zájmů je <strong>3D grafika</strong>, ve které spojuji <strong>technické znalosti 
-        s výtvarným cítěním</strong>. Využívám ji nejen při tvorbě her, ale i jako nástroj, 
-        kterým studentům ukazuji <strong>propojení mezi programováním, designem a uměním</strong>.
-      </p>
-      <p>
-        Věřím, že <strong>informatika je nástroj pro vyjádření nápadů a tvorbu budoucnosti</strong> – 
-        a přesně to se snažím předávat dál.
-      </p>
-      
-    </div>
-    <button class="btn-submit" id="btn-more"><img src="./assets/more_horiz.jpg" alt=""></button>
-    <button class="btn-submit" id="btn-less"><img style="width: 20px;" src="./assets/up.jpeg" alt=""></button>
-  </div>
   </section>
 
-  <!-- Projekty -->
-  <section class="section2" id="2">
-    <!-- První úroveň -->
+  <!-- Sekce Projektů -->
+  <section class="section" id="2">
+
+    <!-- Hlavní kategorie -->
     <div class="category-container" id="category-section">
-      <div class="category" data-category="3D" id="category3D"><img class="img-category" src="./assets/Dungeon.png" alt=""><h2>3D grafika</h2></div>
-      <div class="category" data-category="Fotografie"><img class="img-category-web" src="./assets/web.png" alt=""><h2>Webové stránky</h2></div>
-      <div class="category" data-category="Unity"><img class="img-category" src="./assets/Unity.png" alt=""><h2>Unity Engine</h2></div>
-      
+      <div class="category" data-category="3D" id="category3D">
+        <img class="img-category" src="./assets/Dungeon.png" alt="3D grafika" />
+        <h2>3D grafika</h2>
+      </div>
+      <div class="category" data-category="Fotografie">
+        <img class="img-category-web" src="./assets/web.png" alt="Webové stránky" />
+        <h2>Webové stránky</h2>
+      </div>
+      <div class="category" data-category="Unity">
+        <img class="img-category" src="./assets/Unity.png" alt="Unity Engine" />
+        <h2>Unity Engine</h2>
+      </div>
     </div>
 
-    <!-- Druhá úroveň pro 3D -->
+    <!-- Podkategorie pro 3D -->
     <div class="subcategory-container" id="subcategory-3D">
       <div class="subcategory-title">
         <h2>3D</h2>
         <span class="close">Zavřít</span>
       </div>
-      
       <div class="subcategory" data-sub="Modelování" id="Modelovani">Modelování</div>
       <div class="subcategory" data-sub="Render" id="Render">Render</div>
       <div class="subcategory" data-sub="Animace">Animace</div>
-      
     </div>
 
-    <!-- Podkategorie pro Modelování -->
+    <!-- Další podúroveň pro Modelování -->
     <div class="subcategory-container" id="subcategory-Modelování" style="display: none;">
       <div class="subcategory-title">
-    
-          <h2>Modelování</h2>
-       
-        
-        
+        <h2>Modelování</h2>
         <span class="close">Zavřít</span>
       </div>
-     
     </div>
 
-    <!-- Druhá úroveň pro Fotografie -->
+    <!-- Podkategorie pro Webové stránky -->
     <div class="subcategory-container" id="subcategory-Fotografie">
       <div class="subcategory-title">
         <h2>Webové stránky</h2>
@@ -140,10 +111,9 @@
       </div>
       <div class="subcategory" data-sub="Informační weby">Informační weby</div>
       <div class="subcategory" data-sub="Interaktivní aplikace">Interaktivní aplikace</div>
-      
-   
     </div>
- <!-- Druhá úroveň pro Unity -->
+
+    <!-- Podkategorie pro Unity -->
     <div class="subcategory-container" id="subcategory-Unity">
       <div class="subcategory-title">
         <h2>Unity Engine</h2>
@@ -151,57 +121,53 @@
       </div>
       <div class="subcategory" data-sub="Prototypy">Ukázka prototypů</div>
       <div class="subcategory" data-sub="Hry">Hry</div>
-      
-   
     </div>
 
-    <!-- Třetí úroveň (Projekty) -->
-    
+    <!-- Třetí úroveň - konkrétní projekty -->
     <div id="projects">
       <div class="subcategory-third-level" style="display: none;">
-          <h1 id="project-title"></h1>
+        <h1 id="project-title"></h1>
       </div>
-      
-       
-         
-       
-        <span class="back">Zpět</span>
-   <div>
-     <button class="hamburger-subsection" id="sekce-modely" style="display: none;">&#9776;</label></button>
-  <button class="subcategory-btn" id="sekce-modely-back" style="display: none;"><img src="./assets/up.jpeg" alt="" style="width: 15px;"></button>
-  <div class="subcategory" data-sub="Modelování" id="vsechny-modely" style="display: none;">Celá modelová nabídka</div>
-  <div class="subcategory" data-sub="Automobily" id="Auta" style="display: none;">Auta</div>
-  <div class="subcategory" data-sub="Postavy" id="Postavy" style="display: none;">Postavy</div>
-  <div class="subcategory" data-sub="Prostředí" id="Prostredi" style="display: none;">Prostredi</div>
-  <div class="subcategory" data-sub="Scény" id="Sceny" style="display: none;">Scény</div>
-   </div>
- 
-           <!--Zde jsem to měl před tím, fungovalo to, ale bylo to na píču--> 
-  
-      
-  
-     
-     
+
+      <span class="back">Zpět</span>
+
+      <!-- Podkategorie pro Modely (rozšířená sekce) -->
+      <div>
+        <button class="hamburger-subsection" id="sekce-modely" style="display: none;">&#9776;</button>
+        <button class="subcategory-btn" id="sekce-modely-back" style="display: none;">
+          <img src="./assets/up.jpeg" alt="Zpět" style="width: 15px;" />
+        </button>
+        <div class="subcategory" data-sub="Modelování" id="vsechny-modely" style="display: none;">Celá modelová nabídka</div>
+        <div class="subcategory" data-sub="Automobily" id="Auta" style="display: none;">Auta</div>
+        <div class="subcategory" data-sub="Postavy" id="Postavy" style="display: none;">Postavy</div>
+        <div class="subcategory" data-sub="Prostředí" id="Prostredi" style="display: none;">Prostředí</div>
+        <div class="subcategory" data-sub="Scény" id="Sceny" style="display: none;">Scény</div>
+      </div>
+
+      <!-- Galerie projektů -->
       <div class="gallery-wrapper">
         <button class="gallery-arrow" id="left-arrow">←</button>
         <div class="gallery-track" id="project-list"></div>
         <button class="gallery-arrow" id="right-arrow">→</button>
       </div>
+
+      <!-- (Možné duplikace - podle toho, jak to máš řešené v JS) -->
       <div class="project-list" id="project-list"></div>
     </div>
   </section>
-  <!-- Kontakt -->
-  <section class="section2" id="3">
+
+  <!-- Kontaktní formulář -->
+  <section class="section" id="3">
     <div class="content-box">
       <h2>Kontaktní formulář</h2>
       <form id="contactForm" action="">
         <div class="form-group">
           <label for="name">Jméno</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" required />
         </div>
         <div class="form-group">
           <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" required />
         </div>
         <div class="form-group">
           <label for="message">Zpráva</label>
@@ -212,24 +178,15 @@
     </div>
   </section>
 
+   <!-- Skripty -->
 
 <script src="./script/animation.js"></script>
- <script src="./script/moreBtn.js"></script>
-  <script src="./script/autoscroll.js"></script>
-  <script src="./script/email.js"></script>
-  <script src="./script/galeryScroll.js"></script>
-  <script src="./script/navbarClose.js"></script>
-  <script src="./script/graphicSection.js"></script>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
- 
-
-<script>
-
- 
-
-  </script>
-
-
+<script src="./script/autoscroll.js"></script>
+<script src="./script/email.js"></script>
+<script src="./script/galeryScroll.js"></script>
+<script src="./script/graphicSection.js"></script>
+<script src="./script/moreBtn.js"></script>
+<script src="./script/navbarClose.js"></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
 </html>
